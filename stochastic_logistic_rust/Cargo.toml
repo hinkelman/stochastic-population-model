@@ -1,0 +1,11 @@
+[package]
+name = "stochastic_logistic"
+version = "0.1.0"
+authors = ["Travis Hinkelman <travis.hinkelman@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.7.3"
+rand_distr = "0.3.0"
