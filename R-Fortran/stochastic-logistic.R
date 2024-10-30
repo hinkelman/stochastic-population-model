@@ -50,8 +50,8 @@ microbenchmark(
 rseq <- seq(1.1, 2.2, length.out = 10)
 microbenchmark(
   Rcpp = lapply(rseq, function(x) logmodc(t, yinit, x, k, thetasd)),
-  Fortran = lapply(rseq, function(x) .Fortran("logmodf", t, yinit, x, k, thetasd, vector("numeric", t))),
+  Fortran = lapply(rseq, function(x){
+    .Fortran("logmodf", t, yinit, x, k, thetasd, vector("numeric", t))}),
   R = lapply(rseq, function(x) logmodr(t, yinit, x, k, thetasd)),
-  times = 500L
-)
+  times = 500L)
 
